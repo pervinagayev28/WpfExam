@@ -1,0 +1,61 @@
+﻿<Page x:Class="ForecastDesign.Views.ViewPages.ViewSearchLocationOnMap"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ xmlns:material="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ForecastDesign.Views.ViewPages"
+      xmlns:DesignedButton="clr-namespace:ForecastDesign.UserControllers"
+      mc:Ignorable="d" 
+      Background="Transparent"
+      d:DesignHeight="720" d:DesignWidth="1080"
+      Title="ViewSearchLocationOnMap">
+
+    <Border Background="White" CornerRadius="30">
+        <Grid Background="Transparent" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition  Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="0.6*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Orientation="Horizontal">
+                    <Border  Style="{DynamicResource BorderStyleforButtons}" Margin="10,0,0,0">
+                        <DesignedButton:UserControlButtonStyle IconKind="Home"/>
+                    </Border>
+                </StackPanel>
+                <StackPanel  Height="60" Width="370"  Grid.Column="1" Orientation="Horizontal">
+                    <Grid Width="300" Margin="0,0,10,0">
+                        <Border Name="border" Style="{DynamicResource Border_Style}"/>
+                        <Label Name="lb" Style="{DynamicResource Label_Style}"/>
+                        <TextBox Name="textbox" Style="{DynamicResource TextboxStyle}"/>
+                    </Grid>
+                    <Border  Style="{DynamicResource BorderStyleforButtons}" Margin="0">
+                        <DesignedButton:UserControlButtonStyle Margin="0" IconKind="search"/>
+                    </Border>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Right" Grid.Column="2" Orientation="Horizontal">
+                    <Border  Style="{DynamicResource BorderStyleforButtons}">
+                        <DesignedButton:UserControlButtonStyle Foreground="blue" IconKind="GoogleEarth"/>
+                    </Border>
+
+                    <Border  Style="{DynamicResource BorderStyleforButtons}">
+                        <DesignedButton:UserControlButtonStyle Foreground="gray" IconKind="MapOutline"/>
+                    </Border>
+                    <Border  Style="{DynamicResource BorderStyleforButtons}">
+                        <DesignedButton:UserControlButtonStyle IconKind="Tree" Foreground="green"/>
+                    </Border>
+
+                </StackPanel>
+            </Grid>
+            
+            
+        </Grid>
+    </Border>
+</Page>

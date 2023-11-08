@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="ForecastDesign.UserControllers.UserControlWeekDays"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ForecastDesign.UserControllers"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Border Style="{DynamicResource BorderStyle}">
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock Margin="0" Style="{DynamicResource TextBlockStyle}"/>
+            <Image Source="C:\Users\user\OneDrive\252035.png" Width="20" Margin="0,10,0,10"/>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <TextBlock Text="asdas" Style="{DynamicResource TextBlockStyle}" />
+                <TextBlock Text="asdas" Style="{DynamicResource TextBlockStyle}" />
+            </StackPanel>
+        </StackPanel>
+       
+    </Border>
+</UserControl>

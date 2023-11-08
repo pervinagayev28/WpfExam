@@ -1,0 +1,26 @@
+﻿<Application x:Class="ForecastDesign.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ForecastDesign"
+             StartupUri="Views\ViewWindows\ViewMain.xaml">
+    <Application.Resources>
+        <ResourceDictionary >
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary  Source="\Resources\ResourcePages\ResourcesViewEntry\BorderStyle.xaml"/>
+                <ResourceDictionary  Source="\Resources\ResourcePages\ResourcesViewSearchOnMap\Border_Style.xaml"/>
+                <ResourceDictionary  Source="\Resources\ResourcePages\ResourcesViewSearchOnMap\BorderStyleforButtons.xaml"/>
+                <ResourceDictionary  Source="\Resources\ResourcePages\ResourcesViewSearchOnMap\IconStyle.xaml"/>
+                <ResourceDictionary  Source="\Resources\ResourcePages\ResourcesViewSearchOnMap\Label_Style.xaml"/>
+                <ResourceDictionary  Source="\Resources\ResourcePages\ResourcesViewEntry\ButtonStyle.xaml"/>
+                <ResourceDictionary  Source="\Resources\ResourcePages\ResourcesViewEntry\ImageBorderStyle.xaml"/>
+                <ResourceDictionary  Source="\Resources\ResourcePages\ResourcesViewEntry\SliderStyle.xaml"/>
+                <ResourceDictionary  Source="\Resources\ResourcePages\ResourcesViewEntry\LabelStyle.xaml"/>
+                <ResourceDictionary  Source="\Resources\ResourcePages\ResourcesViewEntry\GroupBoxStyle.xaml"/>
+                <ResourceDictionary  Source="\Resources\ResourcePages\ResourcesViewSearchOnMap\TextboxStyle.xaml"/>
+                <ResourceDictionary  Source="\Resources\ResourcePages\ResourcesViewEntry\TextBoxStyle.xaml"/>
+                <ResourceDictionary  Source="\Resources\ResourceUserControllers\ResourcesUserControllersWeekDays\BorderStyle.xaml"/>
+                <ResourceDictionary  Source="\Resources\ResourceUserControllers\ResourcesUserControllersWeekDays\TextBlockStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
