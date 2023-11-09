@@ -7,7 +7,9 @@
         <ResourceDictionary >
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary  Source="\Resources\ResourcePages\ResourcesViewEntry\BorderStyle.xaml"/>
+                <ResourceDictionary  Source="\Resources\ResourcePages\ResourcesViewEntry\IsMouseOverBackround.xaml"/>
                 <ResourceDictionary  Source="\Resources\ResourcePages\ResourcesViewSearchOnMap\Border_Style.xaml"/>
+                <ResourceDictionary  Source="\Resources\ResourcePages\ResourcesViewSearchOnMap\ViewBackround.xaml"/>
                 <ResourceDictionary  Source="\Resources\ResourcePages\ResourcesViewSearchOnMap\BorderStyleforButtons.xaml"/>
                 <ResourceDictionary  Source="\Resources\ResourcePages\ResourcesViewSearchOnMap\IconStyle.xaml"/>
                 <ResourceDictionary  Source="\Resources\ResourcePages\ResourcesViewSearchOnMap\Label_Style.xaml"/>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ForecastDesign.ViewModels.ViewModelPages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,14 +16,12 @@ using System.Windows.Shapes;
 
 namespace ForecastDesign.Views.ViewPages
 {
-    /// <summary>
-    /// Interaction logic for ViewEntry.xaml
-    /// </summary>
     public partial class ViewEntry : Page
     {
         public ViewEntry()
         {
             InitializeComponent();
+            DataContext = new ViewModelEntry();
         }
     }
 }

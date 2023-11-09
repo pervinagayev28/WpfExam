@@ -6,28 +6,28 @@
         <Setter Property="Width" Value="{Binding ElementName=textbox_search, Path=Width}"/>
         <Setter Property="CornerRadius" Value="10"/>
         <Setter Property="BorderThickness" Value="2"/>
-        <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="BorderBrush" Value="Red"/>
+        <Setter Property="Background" Value="Black"/>
+        <Setter Property="BorderBrush" Value="Blue"/>
         <Style.Triggers>
             <DataTrigger Binding="{Binding ElementName=textbox_search, Path=IsMouseOver}" Value="True">
                 <DataTrigger.EnterActions>
                     <BeginStoryboard>
                         <Storyboard>
                             <ColorAnimation Duration="0:0:0.2" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="LightGray"/>
+                            <ColorAnimation Duration="0:0:0.2" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="Red"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </DataTrigger.EnterActions>
                 <DataTrigger.ExitActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimation Duration="0:0:0.4" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="White"/>
+                            <ColorAnimation Duration="0:0:0.4" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="Black"/>
+                            <ColorAnimation Duration="0:0:0.2" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="Blue"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </DataTrigger.ExitActions>
             </DataTrigger>
-            <DataTrigger Binding="{Binding ElementName=textbox_search, Path=Text}" Value="">
-                <Setter Property="BorderBrush" Value="Gray"/>
-            </DataTrigger>
+           
         </Style.Triggers>
     </Style>
 </ResourceDictionary>

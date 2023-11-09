@@ -4,8 +4,8 @@
     <Style x:Key="ButtonStyle" TargetType="Button">
         <Setter Property="Background" Value="red"/>
         <Setter Property="Foreground" Value="White"/>
-        <Setter Property="Height" Value="30"/>
-        <Setter Property="Width" Value="30"/>
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Width" Value="50"/>
         <Setter Property="FontSize" Value="15"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
@@ -13,7 +13,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border CornerRadius="20"  Background="{TemplateBinding Background}" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}">
+                    <Border CornerRadius="40"  Background="{TemplateBinding Background}" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}">
                         <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
                     </Border>
                 </ControlTemplate>

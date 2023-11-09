@@ -7,18 +7,19 @@
       xmlns:local="clr-namespace:ForecastDesign.Views.ViewPages"
       xmlns:DesignedButton="clr-namespace:ForecastDesign.UserControllers"
       mc:Ignorable="d" 
+      xmlns:map="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
       Background="Transparent"
       d:DesignHeight="720" d:DesignWidth="1080"
       Title="ViewSearchLocationOnMap">
-
-    <Border Background="White" CornerRadius="30">
+ 
         <Grid Background="Transparent" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.2*"/>
                 <RowDefinition  Height="*"/>
             </Grid.RowDefinitions>
-
-            <Grid>
+        <Border CornerRadius="70,70,0,0" Style="{DynamicResource BorderBackround}"/>
+        <Border Grid.Row="1" CornerRadius="0,0,70,70" Style="{DynamicResource BorderBackround}"/>
+        <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.5*"/>
                     <ColumnDefinition Width="*"/>
@@ -27,7 +28,7 @@
 
                 <StackPanel Orientation="Horizontal">
                     <Border  Style="{DynamicResource BorderStyleforButtons}" Margin="10,0,0,0">
-                        <DesignedButton:UserControlButtonStyle IconKind="Home"/>
+                        <DesignedButton:UserControlButtonStyle IconKind="Home" Foreground="White"/>
                     </Border>
                 </StackPanel>
                 <StackPanel  Height="60" Width="370"  Grid.Column="1" Orientation="Horizontal">
@@ -54,8 +55,8 @@
 
                 </StackPanel>
             </Grid>
-            
-            
+            <map:Map Height="500" Width="900"  Grid.Row="1">
+                
+            </map:Map>
         </Grid>
-    </Border>
 </Page>

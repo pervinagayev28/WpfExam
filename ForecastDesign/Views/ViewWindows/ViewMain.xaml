@@ -12,6 +12,6 @@
         MouseDown="WindowMouseDown"
         Title="ViewMain" Height="720" Width="1080">
     <NavigationWindow.Content>
-        <Frame Source="..\ViewPages\ViewSearchLocationOnMap.xaml"/>
+        <Frame Source="..\ViewPages\ViewEntry.xaml"/>
     </NavigationWindow.Content>
 </NavigationWindow>

@@ -3,7 +3,7 @@
     <Style x:Key="BorderStyle" TargetType="Border">
         <Setter Property="Margin" Value="15,0,0,0"/>
         <Setter Property="CornerRadius" Value="15"/>
-        <Setter Property="Background" Value="White"/>
+        <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Height" Value="130"/>
         <Setter Property="Width" Value="100"/>
         <Style.Triggers>
@@ -11,14 +11,14 @@
                         <Trigger.EnterActions>
                             <BeginStoryboard>
                                 <Storyboard>
-                                    <ColorAnimation Duration="0:0:0.2" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="LightGray"/>
+                            <ColorAnimation Duration="0:0:0.2" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="LightGray"/>
                                 </Storyboard>
                             </BeginStoryboard>
                         </Trigger.EnterActions>
                         <Trigger.ExitActions>
                             <BeginStoryboard>
                                 <Storyboard>
-                                    <ColorAnimation Duration="0:0:0.4" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="White"/>
+                                    <ColorAnimation Duration="0:0:0.4" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="Transparent"/>
                                 </Storyboard>
                             </BeginStoryboard>
                         </Trigger.ExitActions>

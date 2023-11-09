@@ -11,174 +11,203 @@
       xmlns:WeekDays="clr-namespace:ForecastDesign.UserControllers"
       Title="ViewEntry">
 
-    <Grid Background="Transparent" >
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.3*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+    <Border  Style="{DynamicResource BorderBackround}" CornerRadius="30">
 
-        <Border Grid.Column="0" Background="White" CornerRadius="30,0,0,30"/>
-        <Border Grid.Column="1"  Background="LightGray" CornerRadius="0,30,30,0"/>
+        <Grid Background="Transparent" Margin="-9,5,9,-5" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-
-        <Grid Grid.Column="0" Margin="10">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.3*"/>
-                <RowDefinition Height="0.4*"/>
-                <RowDefinition Height="0.2*"/>
-                <RowDefinition Height="0.2*"/>
-                <RowDefinition Height="0.2*"/>
-                <RowDefinition Height="0.2*"/>
-                <RowDefinition Height="0.5*"/>
-            </Grid.RowDefinitions>
-
-            <Grid VerticalAlignment="Center" Grid.Row="0">
-                <Border x:Name="border" Style="{DynamicResource borderStyle}"/>
-                <Label Style="{DynamicResource LabelStyle}"/>
-                <GroupBox Style="{DynamicResource GroupBoxStyle}" />
-                <TextBox  x:Name="textbox_search" Style="{DynamicResource TextBoxStyle}" />
-            </Grid>
-            <Image Grid.Row="1"  Source="C:\Users\user\OneDrive\252035.png" Height="100" Width="150" VerticalAlignment="Center"/>
-            <StackPanel Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
-                <TextBlock VerticalAlignment="Center" Text="12" FontSize="40" FontWeight="Bold"/>
-                <materialDesign:PackIcon VerticalAlignment="Center" Kind="TemperatureCelsius" Height="40" Width="40"/>
-            </StackPanel>
-            <StackPanel Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
-                <TextBlock Text="Monday" FontSize="17" FontWeight="Bold"/>
-                <TextBlock Text="12:00" Margin="10,0,0,0" FontSize="17" FontWeight="Bold"/>
-            </StackPanel>
-            <StackPanel Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
-                <Image Height="20" Width="20" Source="C:\Users\user\OneDrive\252035.png"/>
-                <TextBlock Text="Mostly Cloudly" Width="100" Margin="10,0,0,0" FontSize="15"/>
-            </StackPanel>
-            <StackPanel Grid.Row="5"  HorizontalAlignment="Center" Orientation="Horizontal">
-                <Image  Height="20" Width="20" Source="C:\Users\user\OneDrive\252035.png"/>
-                <TextBlock VerticalAlignment="Center" Text="Rain-30%" Width="100" Margin="20,0,0,0" FontSize="15"/>
-            </StackPanel>
-
-
-            <Image Grid.Row="6" Source="C:\Users\user\OneDrive\252035.png" Height="150" Width="200" VerticalAlignment="Center"/>
-        </Grid>
-        <Grid Grid.Column="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.15*"/>
-                <RowDefinition Height="0.4*"/>
-                <RowDefinition Height="0.12*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-
-            <!--colum 1 top-->
-            <StackPanel VerticalAlignment="Center" Height="50" Margin="30,0,0,0" Orientation="Horizontal">
-                <Button Background="Black"  Content="F" Margin="0,0,10,0" Style="{DynamicResource ButtonStyle}"/>
-                <Button Background="White" Foreground="Black"  Content="C" Style="{DynamicResource ButtonStyle}"/>
-            </StackPanel>
-            <!--colum 1 top-->
-
-
-            <StackPanel Grid.Row="1" VerticalAlignment="Center">
-
-                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,0,20,0" Orientation="Horizontal" Background="Transparent" Grid.Row="1">
-                    <WeekDays:UserControlWeekDays/>
-                    <WeekDays:UserControlWeekDays/>
-                    <WeekDays:UserControlWeekDays/>
-                    <WeekDays:UserControlWeekDays/>
-                    <WeekDays:UserControlWeekDays/>
-                    <WeekDays:UserControlWeekDays/>
-                    <WeekDays:UserControlWeekDays/>
-                </StackPanel>
-            </StackPanel>
-
-            <Grid Grid.Row="3">
+            <Grid Grid.Column="0" Margin="10">
                 <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
+                    <RowDefinition Height="0.3*"/>
+                    <RowDefinition Height="0.4*"/>
+                    <RowDefinition Height="0.2*"/>
+                    <RowDefinition Height="0.2*"/>
+                    <RowDefinition Height="0.2*"/>
+                    <RowDefinition Height="0.2*"/>
+                    <RowDefinition Height="0.5*"/>
                 </Grid.RowDefinitions>
 
-                <StackPanel Margin="30,0,0,0" Grid.Row="0" Orientation="Horizontal">
-                    <Border Background="White"  CornerRadius="10" Margin="0,0,10,0"  VerticalAlignment="Center" Height="200" Width="250" >
-                        <StackPanel >
-                            <Label Content="UI temprature" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
-                            <Border Width="200" CornerRadius="10" Margin="0,20,0,0" Padding="10,0,10,0" Height="30" BorderBrush="Gray" BorderThickness="2" Background="Transparent">
-                                <Slider Value="3" VerticalAlignment="Center" Style="{DynamicResource SliderStyle}"/>
-                            </Border>
-                            <Border Width="200" CornerRadius="10" Margin="0,20,0,0" Padding="10,0,10,0" Height="30" BorderBrush="Gray" BorderThickness="2" Background="Transparent">
-                                <Slider Value="7" VerticalAlignment="Center" Style="{DynamicResource SliderStyle}"/>
-                            </Border>
-                            <Border Width="200" CornerRadius="10" Margin="0,20,0,0" Padding="10,0,10,0" Height="30" BorderBrush="Gray" BorderThickness="2" Background="Transparent">
-                                <Slider Value="2" VerticalAlignment="Center" Style="{DynamicResource SliderStyle}"/>
-                            </Border>
-                        </StackPanel>
-                    </Border>
-                    <Border Background="White" CornerRadius="10" Margin="0,0,10,0" Height="200" Width="250" >
-                        <StackPanel>
-                            <Label  Content="wind Status" FontSize="20" FontWeight="Bold" HorizontalContentAlignment="Center"/>
-                            <StackPanel Margin="0,20,0,0" HorizontalAlignment="Center"  Orientation="Horizontal">
-                                <Label FontSize="30" Content="12.7"/>
-                                <Label VerticalAlignment="Bottom" FontSize="10" Content="km/h"/>
-                            </StackPanel>
-                            <Image Source="C:\Users\user\OneDrive\252035.png" Height="50" Width="100" Margin="0,30,0,0"/>
-                        </StackPanel>
-                    </Border>
-                    <Border Background="White" CornerRadius="10" Height="200" Width="250" >
-                        <StackPanel>
-                            <Label FontSize="20" Content="Sunset Sunrise" HorizontalContentAlignment="Center"  FontWeight="Bold"/>
-                            <StackPanel Margin="0,20,0,0" Orientation="Horizontal" HorizontalAlignment="Center">
-                                <materialDesign:PackIcon Kind="Sunrise"  Height="50" Width="50"/>
-                                <Label FontSize="25" Content="06:35"/>
-                            </StackPanel>
-                            <StackPanel Margin="0,20,0,0" Orientation="Horizontal" HorizontalAlignment="Center">
-                                <materialDesign:PackIcon Kind="WeatherSunset"  Height="50" Width="50"/>
-                                <Label FontSize="25" Content="06:35"/>
-                            </StackPanel>
-                        </StackPanel>
-                    </Border>
+                <Grid VerticalAlignment="Center" Grid.Row="0">
+                    <Border x:Name="border" Style="{DynamicResource borderStyle}"/>
+                    <Label Style="{DynamicResource LabelStyle}"/>
+                    <GroupBox Style="{DynamicResource GroupBoxStyle}" />
+                    <TextBox  x:Name="textbox_search" Style="{DynamicResource TextBoxStyle}" />
+                </Grid>
+                <Border CornerRadius="50" Grid.Row="1" Height="100" Width="150" VerticalAlignment="Center">
+                    <Border.Background>
+                        <ImageBrush ImageSource="{Binding weather.ImageSource}"/>
+                    </Border.Background>
+                </Border>
+                <StackPanel Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                    <TextBlock VerticalAlignment="Center" Text="{Binding weather.list[0].main.temp}" FontSize="40" FontWeight="Bold" Foreground="White"/>
+                    <materialDesign:PackIcon VerticalAlignment="Center" Kind="TemperatureCelsius" Height="40" Foreground="White" Width="40"/>
                 </StackPanel>
-                <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="30,0,0,0">
-                    <Border Background="White" CornerRadius="10" Margin="0,0,10,0" Height="200" Width="250" >
+                <StackPanel Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                    <TextBlock Text="{Binding weather.list[0].dt_txt}" FontSize="17" FontWeight="Bold" Foreground="White"/>
+                    <TextBlock Text="{Binding CurrentTime}" Margin="10,0,0,0" FontSize="17" Foreground="White" FontWeight="Bold"/>
+                </StackPanel>
+                <StackPanel Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Cloud" VerticalAlignment="Center" Height="20" Width="20" Foreground="Blue"/>
+                    <TextBlock Text="{Binding weather.list[0].weather[0].description}" Width="100" Margin="10,0,0,0" Foreground="White" FontSize="15"/>
+                </StackPanel>
+                <StackPanel Grid.Row="5"  HorizontalAlignment="Center" Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="RainChance" Margin="0,0,10,0" VerticalAlignment="Center" Height="20" Width="20" Foreground="Blue"/>
+                    <StackPanel Orientation="Horizontal"  Width="100" Height="20">
+                        <TextBlock VerticalAlignment="Center" Text="Rain-" Foreground="White"  FontSize="15"/>
+                    <TextBlock VerticalAlignment="Center" Text="{Binding weather.list[0].main.humidity}"   Foreground="White"  FontSize="15"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <Border Grid.Row="6" Height="150" Width="200"  CornerRadius="50" VerticalAlignment="Center">
+                    <Border.Background>
+                        <ImageBrush ImageSource="{Binding weather.ImageSourceCity}"/>
+                    </Border.Background>
+                </Border>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.25*"/>
+                    <RowDefinition Height="0.4*"/>
+                    <RowDefinition Height="0.9*"/>
+                </Grid.RowDefinitions>
+                <!--colum 1 top-->
+                <Grid Grid.Column="1" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="0.5*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel VerticalAlignment="Center" Height="100" Margin="30,0,0,0" Orientation="Horizontal">
+                        <Button Background="Black"  Content="F" Margin="0,0,10,0" Style="{DynamicResource ButtonStyle}"/>
+                        <Button Background="White" Foreground="Black"  Content="C" Style="{DynamicResource ButtonStyle}"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="2" VerticalAlignment="Center" Height="50" HorizontalAlignment="Right" Margin="0,0,20,0" Orientation="Horizontal">
+                        <Button  Foreground="White" Background="Transparent" Style="{DynamicResource ButtonStyle}">
+                            <materialDesign:PackIcon Foreground="Black" Kind="Location" Height="50" Width="50" />
+                        </Button>
+                        <Button Background="Black"   Margin="10,0,10,0" Style="{DynamicResource ButtonStyle}">
+                            <materialDesign:PackIcon Foreground="LightGray" Kind="CloseCircle" Height="50" Width="50"/>
+                        </Button>
+
+                    </StackPanel>
+                    <StackPanel   VerticalAlignment="Bottom" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" >
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Label FontFamily="Comic Sans MS" FontWeight="Light" HorizontalAlignment="Center" HorizontalContentAlignment="Center"  FontSize="30" Content="{Binding weather.city.name}"/>
+                            <materialDesign:PackIcon Kind="Location" Foreground="Red" Margin="0,0,0,5" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource IconStyle}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+                <!--colum 1 top-->
+
+
+                <StackPanel Grid.Row="1" VerticalAlignment="Center">
+
+                    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,0,20,0" Orientation="Horizontal" Background="Transparent" Grid.Row="1">
+                        <WeekDays:UserControlWeekDays/>
+                        <WeekDays:UserControlWeekDays/>
+                        <WeekDays:UserControlWeekDays/>
+                        <WeekDays:UserControlWeekDays/>
+                        <WeekDays:UserControlWeekDays/>
+                        <WeekDays:UserControlWeekDays/>
+                        <WeekDays:UserControlWeekDays/>
+                    </StackPanel>
+                </StackPanel>
+
+                <Grid Grid.Row="3" Margin="0,0,0,20" HorizontalAlignment="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Margin="30,0,0,0" Grid.Row="0" Orientation="Horizontal">
+                        <Border Style="{DynamicResource BorderStyle}" Margin="0,0,10,0"  Height="200" Width="250" >
+                            <StackPanel >
+                                <Label Content="UI temprature" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                                <Border Style="{DynamicResource Border_Style}" Width="200" CornerRadius="10" Margin="0,20,0,0" Padding="10,0,10,0" Height="30" BorderBrush="Gray" BorderThickness="2" Background="Transparent">
+                                    <Slider Value="3" VerticalAlignment="Center" Style="{DynamicResource SliderStyle}"/>
+                                </Border>
+                                <Border Width="200" CornerRadius="10" Margin="0,20,0,0" Padding="10,0,10,0" Height="30" BorderBrush="Gray" BorderThickness="2" Background="Transparent">
+                                    <Slider Value="7" VerticalAlignment="Center" Style="{DynamicResource SliderStyle}"/>
+                                </Border>
+                                <Border Width="200" CornerRadius="10" Margin="0,20,0,0" Padding="10,0,10,0" Height="30" BorderBrush="Gray" BorderThickness="2" Background="Transparent">
+                                    <Slider Value="2" VerticalAlignment="Center" Style="{DynamicResource SliderStyle}"/>
+                                </Border>
+                            </StackPanel>
+                        </Border>
+                        <Border Style="{DynamicResource BorderStyle}" Margin="0,0,10,0" Height="200" Width="250" >
+                            <StackPanel>
+                                <Label  Content="wind Status" FontSize="20" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+                                <StackPanel Margin="0,20,0,0" HorizontalAlignment="Center"  Orientation="Horizontal">
+                                    <Label FontSize="30" Content="12.7"/>
+                                    <Label VerticalAlignment="Bottom" FontSize="10" Content="km/h"/>
+                                </StackPanel>
+                                <Image Source="C:\Users\user\OneDrive\252035.png" Height="50" Width="100" Margin="0,30,0,0"/>
+                            </StackPanel>
+                        </Border>
+                        <Border Style="{DynamicResource BorderStyle}" Margin="0,0,10,0" Height="200" Width="250" >
+                            <StackPanel>
+                                <Label FontSize="20" Content="Sunset Sunrise" HorizontalContentAlignment="Center"  FontWeight="Bold"/>
+                                <StackPanel Margin="0,20,0,0" Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <materialDesign:PackIcon Kind="Sunrise"  Height="50" Width="50"/>
+                                    <Label FontSize="25" Content="06:35"/>
+                                </StackPanel>
+                                <StackPanel Margin="0,20,0,0" Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <materialDesign:PackIcon Kind="WeatherSunset"  Height="50" Width="50"/>
+                                    <Label FontSize="25" Content="06:35"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="30,0,0,0">
+                        <Border Style="{DynamicResource BorderStyle}" Margin="0,0,10,0" Height="200" Width="250" >
                             <StackPanel >
                                 <Label Content="Humiditly" HorizontalContentAlignment="Center" FontSize="25" FontWeight="Bold"/>
-                            <Border Width="200" CornerRadius="10" Margin="0,20,5,0" Padding="10,0,10,0" Height="30" BorderBrush="Gray" BorderThickness="2" Background="Transparent">
-                                <Slider Value="3" VerticalAlignment="Center" Style="{DynamicResource SliderStyle}"/>
-                            </Border>
-                            <StackPanel HorizontalAlignment="Center"  Orientation="Horizontal">
+                                <Border Width="200" CornerRadius="10" Margin="0,20,5,0" Padding="10,0,10,0" Height="30" BorderBrush="Gray" BorderThickness="2" Background="Transparent">
+                                    <Slider Value="3" VerticalAlignment="Center" Style="{DynamicResource SliderStyle}"/>
+                                </Border>
+                                <StackPanel HorizontalAlignment="Center"  Orientation="Horizontal">
                                     <Label Content="56" FontSize="30" Margin="0,10,0,0"/>
                                     <Label Content="%" FontSize="20" VerticalContentAlignment="Bottom" Margin="0,20,0,0"/>
                                 </StackPanel>
                                 <Label Content="Normal" HorizontalAlignment="Center" FontSize="20"  Margin="0,10,0,0"/>
                             </StackPanel>
-                            
-                    </Border>
-                    <Border Background="White" CornerRadius="10" Margin="0,0,10,0" Height="200" Width="250" >
-                        <StackPanel >
-                            <Label Content="Visibility" HorizontalContentAlignment="Center" FontSize="25" FontWeight="Bold"/>
-                            <Border Width="200" CornerRadius="10" Margin="0,20,5,0" Padding="10,0,10,0" Height="30" BorderBrush="Gray" BorderThickness="2" Background="Transparent">
-                                <Slider Value="3" VerticalAlignment="Center" Style="{DynamicResource SliderStyle}"/>
-                            </Border>
-                            <StackPanel HorizontalAlignment="Center"  Orientation="Horizontal">
-                                <Label Content="56" FontSize="30" Margin="0,10,0,0"/>
-                                <Label Content="km" FontSize="20" VerticalContentAlignment="Bottom" Margin="0,20,0,0"/>
-                            </StackPanel>
-                            <Label Content="Normal" HorizontalAlignment="Center" FontSize="20"  Margin="0,10,0,0"/>
-                        </StackPanel>
 
-                    </Border>
-                    <Border Background="White" CornerRadius="10" Margin="0,0,10,0" Height="200" Width="250" >
-                        <StackPanel >
-                            <Label Content="Air Quality" HorizontalContentAlignment="Center" FontSize="25" FontWeight="Bold"/>
-                            <Border Width="200" CornerRadius="10" Margin="0,20,5,0" Padding="10,0,10,0" Height="30" BorderBrush="Gray" BorderThickness="2" Background="Transparent">
-                                <Slider Value="3" VerticalAlignment="Center" Style="{DynamicResource SliderStyle}"/>
-                            </Border>
-                            <StackPanel HorizontalAlignment="Center"  Orientation="Horizontal">
-                                <Label Content="56" FontSize="30" Margin="0,10,0,0"/>
-                                <Label Content="AQI" FontSize="20" VerticalContentAlignment="Bottom" Margin="0,20,0,0"/>
+                        </Border>
+                        <Border Style="{DynamicResource BorderStyle}" Margin="0,0,10,0" Height="200" Width="250" >
+                            <StackPanel >
+                                <Label Content="Visibility" HorizontalContentAlignment="Center" FontSize="25" FontWeight="Bold"/>
+                                <Border Width="200" CornerRadius="10" Margin="0,20,5,0" Padding="10,0,10,0" Height="30" BorderBrush="Gray" BorderThickness="2" Background="Transparent">
+                                    <Slider Value="3" VerticalAlignment="Center" Style="{DynamicResource SliderStyle}"/>
+                                </Border>
+                                <StackPanel HorizontalAlignment="Center"  Orientation="Horizontal">
+                                    <Label Content="56" FontSize="30" Margin="0,10,0,0"/>
+                                    <Label Content="km" FontSize="20" VerticalContentAlignment="Bottom" Margin="0,20,0,0"/>
+                                </StackPanel>
+                                <Label Content="Normal" HorizontalAlignment="Center" FontSize="20"  Margin="0,10,0,0"/>
                             </StackPanel>
-                            <Label Content="Normal" HorizontalAlignment="Center" FontSize="20"  Margin="0,10,0,0"/>
-                        </StackPanel>
 
-                    </Border>
-                </StackPanel>
+                        </Border>
+                        <Border Style="{DynamicResource BorderStyle}" Margin="0,0,10,0" Height="200" Width="250" >
+                            <StackPanel >
+                                <Label Content="Air Quality" HorizontalContentAlignment="Center" FontSize="25" FontWeight="Bold"/>
+                                <Border Width="200" CornerRadius="10" Margin="0,20,5,0" Padding="10,0,10,0" Height="30" BorderBrush="Gray" BorderThickness="2" Background="Transparent">
+                                    <Slider Value="3" VerticalAlignment="Center" Style="{DynamicResource SliderStyle}"/>
+                                </Border>
+                                <StackPanel HorizontalAlignment="Center"  Orientation="Horizontal">
+                                    <Label Content="56" FontSize="30" Margin="0,10,0,0"/>
+                                    <Label Content="AQI" FontSize="20" VerticalContentAlignment="Bottom" Margin="0,20,0,0"/>
+                                </StackPanel>
+                                <Label Content="Normal" HorizontalAlignment="Center" FontSize="20"  Margin="0,10,0,0"/>
+                            </StackPanel>
+
+                        </Border>
+                    </StackPanel>
+                </Grid>
+
             </Grid>
-
         </Grid>
-    </Grid>
+    </Border>
 </Page>

@@ -47,3 +47,14 @@ C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\obj\Debug\net6.0-wi
 C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\obj\Debug\net6.0-windows\UserControllers\UserControlButtonStyle.baml
 C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\obj\Debug\net6.0-windows\Resources\ResourcePages\ResourcesViewSearchOnMap\BorderStyleForButtons.baml
 C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\obj\Debug\net6.0-windows\Resources\ResourcePages\ResourcesViewSearchOnMap\IconStyle.baml
+C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\bin\Debug\net6.0-windows\Microsoft.Maps.MapControl.WPF.dll
+C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\obj\Debug\net6.0-windows\Resources\ResourcePages\ResourcesViewSearchOnMap\ViewBackround.baml
+C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\obj\Debug\net6.0-windows\Resources\ResourcePages\ResourcesViewEntry\IsMouseOverBackround.baml
+C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\bin\Debug\net6.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
