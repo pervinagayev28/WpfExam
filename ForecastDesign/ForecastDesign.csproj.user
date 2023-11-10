@@ -42,6 +42,12 @@
     <Page Update="Resources\ResourcePages\ResourcesViewEntry\LabelStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Resources\ResourcePages\ResourcesViewEntry\ListViewStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\ResourcePages\ResourcesViewEntry\SearchButtonStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Resources\ResourcePages\ResourcesViewEntry\Sliderstyle.xaml">
       <SubType>Designer</SubType>
     </Page>

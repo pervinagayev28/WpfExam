@@ -7,19 +7,22 @@ using System.Windows.Input;
 
 namespace ForecastDesign.Commands
 {
+    
     public class Command : ICommand
     {
-        public Command(Action<object>? action, Predicate<object>? predicat)
-        {
-            this.action = action;
-            this.predicat = predicat;
-        }
-
         public event EventHandler? CanExecuteChanged
         {
             add { CommandManager.RequerySuggested += value; }
             remove { CommandManager.RequerySuggested -= value; }
         }
+        public Command(Action<object> action, Predicate<object> predicat=null)
+        {
+            this.action = action;
+            this.predicat = predicat;
+            if (this.predicat == null)
+                this.predicat = (obj) => true;
+        }
+
 
         public Action<object>? action { get; set; }
         public Predicate<object>? predicat { get; set; }

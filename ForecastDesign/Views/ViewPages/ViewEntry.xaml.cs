@@ -18,10 +18,21 @@ namespace ForecastDesign.Views.ViewPages
 {
     public partial class ViewEntry : Page
     {
+
+        public static readonly DependencyProperty HeaderProperty =
+               DependencyProperty.Register("foo", typeof(string), typeof(ViewEntry));
+
+        public string foo
+        {
+            get { return (string)GetValue(HeaderProperty); }
+            set { SetValue(HeaderProperty, value); }
+        }
         public ViewEntry()
         {
             InitializeComponent();
             DataContext = new ViewModelEntry();
         }
+
+     
     }
 }

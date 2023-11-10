@@ -6,13 +6,13 @@
              xmlns:local="clr-namespace:ForecastDesign.UserControllers"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Border Style="{DynamicResource BorderStyle}">
+    <Border Style="{DynamicResource BorderStyle}" >
         <StackPanel VerticalAlignment="Center">
-            <TextBlock Margin="0" Style="{DynamicResource TextBlockStyle}"/>
-            <Image Source="C:\Users\user\OneDrive\252035.png" Width="20" Margin="0,10,0,10"/>
-            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-                <TextBlock Text="asdas" Style="{DynamicResource TextBlockStyle}" />
-                <TextBlock Text="asdas" Style="{DynamicResource TextBlockStyle}" />
+            <TextBlock Margin="0,0,0,5" Text="{Binding dt_txt}" Style="{DynamicResource TextBlockStyle}"/>
+            <Image Source="{Binding weather[0].icon}" Width="40" Height="40" Margin="0,10,0,0"/>
+            <StackPanel HorizontalAlignment="Center" Margin="0,10,0,0" Orientation="Horizontal">
+                <TextBlock Text="{Binding main.temp_max}" Style="{DynamicResource TextBlockStyle}" />
+                <TextBlock Foreground="Gray" Text="{Binding main.temp_min}" Style="{DynamicResource TextBlockStyle}" />
             </StackPanel>
         </StackPanel>
        

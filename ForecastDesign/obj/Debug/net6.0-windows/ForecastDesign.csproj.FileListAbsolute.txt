@@ -58,3 +58,5 @@ C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\bin\Debug\net6.0-wi
 C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
 C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\bin\Debug\net6.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\obj\Debug\net6.0-windows\Resources\ResourcePages\ResourcesViewEntry\ListViewStyle.baml
+C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\obj\Debug\net6.0-windows\Resources\ResourcePages\ResourcesViewEntry\SearchButtonStyle.baml

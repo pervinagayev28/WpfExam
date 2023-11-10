@@ -3,7 +3,7 @@
     <Style x:Key="borderStyle" TargetType="Border">
         <Setter Property="Margin" Value="{Binding ElementName=textbox_search, Path=Margin}"/>
         <Setter Property="Height" Value="{Binding ElementName=textbox_search, Path=Height}"/>
-        <Setter Property="Width" Value="{Binding ElementName=textbox_search, Path=Width}"/>
+        <Setter Property="Width" Value="200"/>
         <Setter Property="CornerRadius" Value="10"/>
         <Setter Property="BorderThickness" Value="2"/>
         <Setter Property="Background" Value="Black"/>
@@ -13,8 +13,8 @@
                 <DataTrigger.EnterActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimation Duration="0:0:0.2" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="LightGray"/>
-                            <ColorAnimation Duration="0:0:0.2" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="Red"/>
+                            <ColorAnimation Duration="0:0:0.2" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="AliceBlue"/>
+                            <ColorAnimation Duration="0:0:0.2" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="DarkBlue"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </DataTrigger.EnterActions>

@@ -9,10 +9,14 @@
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="Content" Value="search"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="{Binding ElementName=textbox_search, Path=HorizontalAlignment}"/>
         <Setter Property="FontWeight" Value="{Binding ElementName=textbox_search, Path=FontWeight}"/>
         <Style.Triggers>
             <DataTrigger Binding="{Binding ElementName=textbox_search, Path=Text}" Value="">
                 <Setter Property="Visibility" Value="Visible"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding ElementName=textbox_search, Path=IsMouseOver}" Value="True">
+                <Setter Property="Foreground" Value="Black"/>
             </DataTrigger>
         </Style.Triggers>
     </Style>
