@@ -67,9 +67,8 @@ namespace ForecastDesign.ViewModels.ViewModelPages
         #endregion
         public ViewModelEntry()
         {
-
-            //Timer();
-            //GetDataAsync("Xirdalan");
+            Timer();
+            GetDataAsync("Xirdalan");
             ClosedCommand = new Command(ExecuteCloseCommand);
             FahrenHeitCommand = new Command(ExecuteFahrenHeitCommandCommand);
             CelciCommand = new Command(ExecuteCelciCommand);

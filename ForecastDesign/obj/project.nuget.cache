@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "liOzg4GUk54M13OQHGekyVCGi209mODHYetiFh+4Mpm6DZdr7m/isfBS262JUm4qzHDt2SvB1Rj7xI6sQfYFZw==",
+  "dgSpecHash": "q1epIZW0UV4OJ29NaolDDtiUDiaTwxMygM8T6hozOPSOSU5ks/QBc5RwccamdKL0af4IS/fElvmIW1y5jrUopg==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\OneDrive\\Desktop\\ForecastDesign\\ForecastDesign\\ForecastDesign.csproj",
   "expectedPackageFiles": [
@@ -16,6 +16,7 @@
     "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.maps.mapcontrol.wpf\\1.0.0.3\\microsoft.maps.mapcontrol.wpf.1.0.0.3.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"

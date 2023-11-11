@@ -50,7 +50,7 @@
                     <materialDesign:PackIcon VerticalAlignment="Center" Kind="{Binding weather.kindTemp}" Height="40" Foreground="White" Width="40"/>
                 </StackPanel>
                 <StackPanel Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
-                    <TextBlock Text="{Binding weather.list[0].dt_txt}" FontSize="17" FontWeight="Bold" Foreground="White"/>
+                    <TextBlock Text="{Binding weather.Today}" FontSize="17" FontWeight="Bold" Foreground="White"/>
                     <TextBlock Text="{Binding CurrentTime}" Margin="10,0,0,0" FontSize="17" Foreground="White" FontWeight="Bold"/>
                 </StackPanel>
                 <StackPanel Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">

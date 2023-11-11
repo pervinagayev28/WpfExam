@@ -30,11 +30,10 @@ namespace ForecastDesign.Statics.StaticClasses.PullWeatherDataClasses
             {
                 var api = GetApiKey.GetApiKeyString("ApiKeys", "WeatherApiKey");
                 HttpResponseMessage response = await client
-                .GetAsync($"http://api.openweathermap.org/data/2.5/forecast?q={location}&appid={(GetApiKey.GetApiKeyString("ApiKeys", "WeatherApiKey"))}&units=metric");
+                .GetAsync($"http://api.openweathermap.org/data/2.5/forecast?q={location}&appid={api}&units=metric");
                 try
                 {
-
-                response.EnsureSuccessStatusCode();
+                    response.EnsureSuccessStatusCode();
                 }
                 catch (Exception)
                 {
@@ -46,10 +45,11 @@ namespace ForecastDesign.Statics.StaticClasses.PullWeatherDataClasses
                 weather!.city!.name = weather.city.country + " , " + weather!.city!.name;
                 weather.SunRise = (UnixTimeStampToDateTime(weather.city.sunrise)).ToString("HH:mm");
                 weather.SunSet = (UnixTimeStampToDateTime(weather.city.sunset)).ToString("HH:mm");
+                weather.Today = GetDayName.GetDayOfWeekString(DateTime.Now);
                 return weather;
             }
         }
-        private static  void GetWeeklyData(ref WeatherData weather)
+        private static void GetWeeklyData(ref WeatherData weather)
         {
             List<ListItem> temp = new(weather?.list!);
             if (temp.Count > 7)
@@ -59,7 +59,7 @@ namespace ForecastDesign.Statics.StaticClasses.PullWeatherDataClasses
             int day = 0;
             foreach (var weekday in weather?.list!)
             {
-                weekday.dt_txt = GetDayName.GetDayOfWeekString(DateTime.Now.AddDays(day++));
+                weekday.dt_txt = (DateTime.Now.AddHours(day++).ToString("HH,mm"));
                 weekday.weather![0].icon = $"http://openweathermap.org/img/w/{weekday.weather![0].icon}.png";
                 weekday.main!.temp_max = ((int)weekday.main!.temp_max);
                 weekday.main!.temp_min = ((int)weekday.main!.temp_min);

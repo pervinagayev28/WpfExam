@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Maps.MapControl.WPF;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,20 +10,28 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ForecastDesign.Views.ViewPages
 {
-    /// <summary>
-    /// Interaction logic for ViewSearchLocationOnMap.xaml
-    /// </summary>
+    
     public partial class ViewSearchLocationOnMap : Page
     {
         public ViewSearchLocationOnMap()
         {
             InitializeComponent();
+
         }
+
+     
+
+        private void changed(object sender, TextChangedEventArgs e)
+        {
+            map.ZoomLevel = 1;
+        }
+        
     }
 }

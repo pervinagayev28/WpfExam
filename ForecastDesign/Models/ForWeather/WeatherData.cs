@@ -24,5 +24,6 @@ namespace ForecastDesign.Models.ForWeather
         public ImageSource ImageSourceCity { get => imageSourceCity!; set { imageSourceCity = value; OnPropertyChanged(); } }
         public string SunRise { get; set; }
         public string SunSet { get; set; }
+        public string ?Today { get; set; }
     }
 }

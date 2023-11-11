@@ -20,6 +20,24 @@ namespace ForecastDesign.UserControllers
     /// </summary>
     public partial class UserControlButtonStyle : UserControl
     {
+        public static readonly DependencyProperty CommandProperty =
+                     DependencyProperty.Register("command", typeof(ICommand), typeof(UserControlButtonStyle));
+
+        public ICommand command
+        {
+            get { return (ICommand)GetValue(CommandProperty); }
+            set { SetValue(CommandProperty, value); }
+        }
+
+        public static readonly DependencyProperty CommandParamProperty =
+                     DependencyProperty.Register("CommandParam", typeof(object), typeof(UserControlButtonStyle));
+
+        public object CommandParam
+        {
+            get { return (object)GetValue(CommandParamProperty); }
+            set { SetValue(CommandParamProperty, value); }
+        }
+
         public static readonly DependencyProperty IconKindProperty =
                       DependencyProperty.Register("IconKind", typeof(string), typeof(UserControlButtonStyle));
 
@@ -31,6 +49,11 @@ namespace ForecastDesign.UserControllers
         public UserControlButtonStyle()
         {
             InitializeComponent();
+        }
+
+        private void some(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("sdsadfsd");
         }
     }
 }
