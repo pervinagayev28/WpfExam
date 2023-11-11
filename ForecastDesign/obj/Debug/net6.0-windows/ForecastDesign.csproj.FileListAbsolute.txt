@@ -61,3 +61,5 @@ C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\bin\Debug\net6.0-wi
 C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\obj\Debug\net6.0-windows\Resources\ResourcePages\ResourcesViewEntry\ListViewStyle.baml
 C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\obj\Debug\net6.0-windows\Resources\ResourcePages\ResourcesViewEntry\SearchButtonStyle.baml
 C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\obj\Debug\net6.0-windows\UserControllers\UserControlMapContent.g.cs
+C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\obj\Debug\net6.0-windows\UserControllers\UserControlMapContent.baml

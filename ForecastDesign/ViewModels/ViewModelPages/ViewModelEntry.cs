@@ -70,12 +70,13 @@ namespace ForecastDesign.ViewModels.ViewModelPages
             Timer();
             GetDataAsync("Xirdalan");
             ClosedCommand = new Command(ExecuteCloseCommand);
-            FahrenHeitCommand = new Command(ExecuteFahrenHeitCommandCommand);
-            CelciCommand = new Command(ExecuteCelciCommand);
+            FahrenHeitCommand = new Command(ExecuteFahrenHeitCommand, CanExecuteFahrenHeitCommand);
+            CelciCommand = new Command(ExecuteCelciCommand, CanExecuteCelciCommand);
             SearchCommand = new Command(ExecuteSearchCommand, CanExecuteSearchCommand);
             MapCommand = new Command(ExecuteMapCommand);
 
         }
+
 
         private void ExecuteMapCommand(object obj)
         {
@@ -103,8 +104,10 @@ namespace ForecastDesign.ViewModels.ViewModelPages
             weather!.kindTemp = "TemperatureCelsius";
             weather!.list![0]!.main!.temp = ConverterTemrature.ConvertToCelsius(weather.list![0]!.main!.temp);
         }
+        private bool CanExecuteCelciCommand(object obj) =>
+             ((Button)((StackPanel)obj).FindName("C")).Background != Brushes.White;
 
-        private void ExecuteFahrenHeitCommandCommand(object obj)
+        private void ExecuteFahrenHeitCommand(object obj)
         {
             Button? btn_f = (Button)((StackPanel)obj).FindName("F");
             Button? btn_c = (Button)((StackPanel)obj).FindName("C");
@@ -115,7 +118,8 @@ namespace ForecastDesign.ViewModels.ViewModelPages
             weather!.kindTemp = "TemperatureFahrenheit";
             weather!.list![0]!.main!.temp = ConverterTemrature.ConvertToFarenheit(weather.list![0]!.main!.temp);
         }
-
+        private bool CanExecuteFahrenHeitCommand(object obj) =>
+             ((Button)((StackPanel)obj).FindName("F")).Background != Brushes.White;
         private void ExecuteCloseCommand(object? param)
         {
             if (param is Page child)

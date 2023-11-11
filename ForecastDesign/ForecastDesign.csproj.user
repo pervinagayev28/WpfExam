@@ -10,6 +10,9 @@
     <Compile Update="UserControllers\UserControlButtonStyle.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UserControllers\UserControlMapContent.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UserControllers\UserControlWeekDays.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -79,6 +82,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UserControllers\UserControlButtonStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControllers\UserControlMapContent.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UserControllers\UserControlWeekDays.xaml">

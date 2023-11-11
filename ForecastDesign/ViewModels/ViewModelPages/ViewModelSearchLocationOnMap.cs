@@ -4,26 +4,28 @@ using ForecastDesign.Models.ForWeather;
 using ForecastDesign.Services;
 using ForecastDesign.Statics.StaticClasses.GetApiKeys;
 using ForecastDesign.Statics.StaticClasses.PullWeatherDataClasses;
+using ForecastDesign.UserControllers;
 using Microsoft.Maps.MapControl.WPF;
 using Microsoft.Maps.MapControl.WPF.Core;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media.Animation;
 
 namespace ForecastDesign.ViewModels.ViewModelPages
 {
     public class ViewModelSearchLocationOnMap : ServiceINotifyPropertyChanged
     {
-        public static WeatherData test { get; set; }
         private WeatherData? Weather;
         private CredentialsProvider? credentialProvider;
 
-        public WeatherData? weatherr { get => Weather; set { Weather = value; OnPropertyChanged(); } }
+        public WeatherData? weather { get => Weather; set { Weather = value; OnPropertyChanged(); } }
         public CredentialsProvider? CredentialProvider { get => credentialProvider; set { credentialProvider = value; OnPropertyChanged(); } }
         public ICommand? GoBackCommand { get; set; }
         public ICommand? EarthModeCommmand { get; set; }
@@ -49,18 +51,17 @@ namespace ForecastDesign.ViewModels.ViewModelPages
         }
         private async void GetDataAsync(string location, Map map)
         {
+            weather = await GetWeatherData.GetWeatherDataAsync(location)!;
+            map.Children.Clear();
+            
             Coord data = await GetLocationCoordinat.Get(location);
-            map.Center = new Location(data.lat,data.lon);
-            map.CredentialsProvider = credentialProvider;
+            map.Center = new Location(weather.city!.coord.lat, weather.city.coord.lon);
             map.ZoomLevel = 10;
-        //    weatherr = new();
-        //    weatherr = await GetWeatherData.GetWeatherDataAsync(location)!;
-        //    test = weatherr;
-        //    if (weatherr == null)
-        //    {
-        //        MessageBox.Show("not found location");
-        //        weatherr = await GetWeatherData.GetWeatherDataAsync("baku")!;
-        //    }
+            map.Children.Add(new Pushpin()
+            {
+                Location = new Location(data.lat, data.lon),
+            });
+            ToolTipService.SetToolTip(((Pushpin)map.Children[map.Children.Count - 1]), new UserControlMapContent());
         }
 
         private bool CanExecuteAerialWithLabelsModeCommmand(object obj) =>
