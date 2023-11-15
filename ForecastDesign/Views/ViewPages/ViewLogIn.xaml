@@ -22,16 +22,15 @@
             <StackPanel Grid.Row="1" Background="Transparent" VerticalAlignment="Center">
                 <Grid HorizontalAlignment="Center" Background="Transparent">
                     <UCTextbox:UserControlTextBox LbContent="Gmail" Text="{Binding ElementName=gmail, Path=Text}"/>
-                    <TextBox x:Name="gmail" Style="{DynamicResource ViewLogInTextBoxStyle}"/>
+                    <TextBox x:Name="gmail" HorizontalContentAlignment="Center" Padding="5,0" Style="{DynamicResource ViewLogInTextBoxStyle}"/>
                 </Grid>
                 <Grid Margin="20" HorizontalAlignment="Center" Background="Transparent">
                     <UCTextbox:UserControlTextBox LbContent="Password" Text="{Binding ElementName=password, Path=Text}"/>
-                    <TextBox x:Name="password" Style="{DynamicResource ViewLogInTextBoxStyle}"/>
+                    <TextBox x:Name="password" HorizontalContentAlignment="Center" Padding="5,0" Style="{DynamicResource ViewLogInTextBoxStyle}"/>
                 </Grid>
-                <Button Command="{Binding SignIncommand}"
+                <Button Name="btn" Command="{Binding SignIncommand}"
                         CommandParameter="{Binding ElementName=page}"
                         Style="{DynamicResource ViewInButtonStyle}" Content="Sign in" Margin="10"/>
-                <Label Name="lb_error" Visibility="Hidden" Height="40" Width="300" Content="errrorere" FontSize="20" HorizontalContentAlignment="Center" Foreground="red"/>
 
             </StackPanel>
         </Grid>

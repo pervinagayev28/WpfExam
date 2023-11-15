@@ -80,3 +80,5 @@ C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\obj\Debug\net6.0-wi
 C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\obj\Debug\net6.0-windows\UserControllers\UserControlTextBox.g.cs
 C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\obj\Debug\net6.0-windows\UserControllers\UserControlTextBox.baml
 C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\obj\Debug\net6.0-windows\Resources\ResourcePages\ResourcesViewLogIn\ViewLogInTextBoxStyle.baml
+C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\bin\Debug\net6.0-windows\appsettings.json
+C:\Users\user\OneDrive\Desktop\ForecastDesign\ForecastDesign\obj\Debug\net6.0-windows\ForecastDesign_Content.g.cs

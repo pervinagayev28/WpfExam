@@ -5,21 +5,29 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ForecastDesign.Views.ViewPages" xmlns:UCTextbox="clr-namespace:ForecastDesign.UserControllers"
       mc:Ignorable="d" 
+      xmlns:btn="clr-namespace:ForecastDesign.UserControllers"
+      Name="page"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ViewCreatPass">
 
     <Border  Style="{DynamicResource BorderBackround}"  CornerRadius="30">
-        <Grid Background="Transparent">
+        <Grid  Background="Transparent">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions >
+            <btn:UserControlViewInButton CommandParam="{Binding ElementName=page}"  command="{Binding GoBackcommand}"   HorizontalAlignment="Left" IconKind="ArrowBack"/>
+            <btn:UserControlViewInButton CommandParam="{Binding ElementName=page}"  command="{Binding Closecommand}" HorizontalAlignment="Right" IconKind="Close"/>
             <StackPanel Grid.Row="1" Background="Transparent" VerticalAlignment="Center">
                 <Grid HorizontalAlignment="Center" Background="Transparent">
                     <UCTextbox:UserControlTextBox LbContent="Password" Text="{Binding ElementName=password, Path=Text}"/>
-                    <TextBox x:Name="password" Style="{DynamicResource ViewLogInTextBoxStyle}"/>
+                    <TextBox x:Name="password" Style="{DynamicResource ViewLogInTextBoxStyle}" TextChanged="password_TextChanged"/>
                 </Grid>
                 <Grid Margin="20" HorizontalAlignment="Center" Background="Transparent">
                     <UCTextbox:UserControlTextBox LbContent="Location" Text="{Binding ElementName=location, Path=Text}"/>
                     <TextBox x:Name="location" Style="{DynamicResource ViewLogInTextBoxStyle}"/>
                 </Grid>
-                <Button Style="{DynamicResource ViewInButtonStyle}" Content="Sign in" Margin="10"/>
+                <Button Name="btn" Command="{Binding SignInCommand}" CommandParameter="{Binding ElementName=page}" Style="{DynamicResource ViewInButtonStyle}" Content="Sign in" Margin="10"/>
                 <Label Name="lb_error" Visibility="Hidden" Height="40" Width="300" Content="errrorere" FontSize="20" HorizontalContentAlignment="Center" Foreground="red"/>
             </StackPanel>
         </Grid>

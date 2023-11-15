@@ -24,5 +24,10 @@ namespace ForecastDesign.Views.ViewPages
         {
             InitializeComponent();
         }
+
+        private void password_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

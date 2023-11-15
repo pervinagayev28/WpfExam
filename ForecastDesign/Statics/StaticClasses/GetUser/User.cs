@@ -9,6 +9,7 @@ namespace ForecastDesign.Statics.StaticClasses.GetUser
 {
     public static class GetUsers
     {
-        public static List<User>?users { get; set; }
+        public static List<User>? users { get; set; } = new();
+        public static User? user { get; set; } = new();
     }
 }

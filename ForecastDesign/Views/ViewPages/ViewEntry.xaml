@@ -34,7 +34,7 @@
 
                     <Grid VerticalAlignment="Center" Width="{Binding ElementName=border, Path=Width}" Grid.Row="0" Margin="0,5,0,0">
                         <Border x:Name="border" Style="{DynamicResource borderStyle}" />
-                        <Label Name="lb" Style="{DynamicResource LabelStyle}"/>
+                        <Label Content="search" Name="lb" Style="{DynamicResource LabelStyle}"/>
                         <TextBox  x:Name="textbox_search" Style="{DynamicResource TextBoxStyle}" />
                         <Button Command="{Binding SearchCommand}" CommandParameter="{Binding ElementName=textbox_search, Path=Text}" Style="{DynamicResource SearchButtonStyle}">
                             <materialDesign:PackIcon Height="30" Width="30" Kind="Search" Foreground="{Binding ElementName=lb, Path=Foreground}"/>
@@ -103,7 +103,7 @@
                             </Button>
 
                         </StackPanel>
-                        <StackPanel   VerticalAlignment="Bottom" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" >
+                        <StackPanel   VerticalAlignment="Bottom" Grid.Column="1"  HorizontalAlignment="Center" >
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <Label FontFamily="Comic Sans MS" FontWeight="Light" HorizontalAlignment="Center" HorizontalContentAlignment="Center"  FontSize="30" Content="{Binding weather.city.name}"/>
                                 <materialDesign:PackIcon Kind="Location" Foreground="Red" Margin="0,0,0,5" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource IconStyle}"/>

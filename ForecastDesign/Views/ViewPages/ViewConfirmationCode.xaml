@@ -4,29 +4,39 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ForecastDesign.Views.ViewPages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:btn="clr-namespace:ForecastDesign.UserControllers"
       mc:Ignorable="d" 
+      Name="page"
+      xmlns:UCTextbox="clr-namespace:ForecastDesign.UserControllers"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ViewConfirmationCode">
 
     <Border  Style="{DynamicResource BorderBackround}"  CornerRadius="30">
-        <Grid Background="Transparent">
+        <Grid  Background="Transparent">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions >
+            <btn:UserControlViewInButton CommandParam="{Binding ElementName=page}"  command="{Binding GoBackcommand}"   HorizontalAlignment="Left" IconKind="ArrowBack"/>
+            <btn:UserControlViewInButton CommandParam="{Binding ElementName=page}"  command="{Binding Closecommand}" HorizontalAlignment="Right" IconKind="Close"/>
             <StackPanel Grid.Row="1" Background="Transparent" VerticalAlignment="Center">
-                <Grid VerticalAlignment="Center" Width="{Binding ElementName=border, Path=Width}" Grid.Row="0" Margin="0,5,0,0">
-                    <Border Height="70" BorderThickness="0" Width="300" CornerRadius="20" x:Name="border" Style="{DynamicResource borderStyle}">
-                        <Border.Background>
-                            <LinearGradientBrush>
-                                <GradientStop Color="Black" Offset="0.2"/>
-                                <GradientStop Color="AliceBlue" Offset="0.0"/>
-                            </LinearGradientBrush>
-                        </Border.Background>
-                    </Border>
-                    <Label FontSize="30" Foreground="Gray" Height="70" Width="300" HorizontalContentAlignment="Center" Content="Code" Style="{DynamicResource LabelStyle}"/>
-                    <TextBox Name="textbox" FontSize="30" Foreground="Gray" Height="70" Width="300"   Style="{DynamicResource TextBoxStyle}" />
+                <Grid HorizontalAlignment="Center" Background="Transparent">
+                    <UCTextbox:UserControlTextBox LbContent="code" Text="{Binding ElementName=code, Path=Text}"/>
+                    <TextBox x:Name="code" Style="{DynamicResource ViewLogInTextBoxStyle}"/>
                 </Grid>
-                <Button Style="{DynamicResource ViewInButtonStyle}" Content="Confirm" Margin="20"/>
-                <Label Height="40" Width="300" Content="errrorere" FontSize="20" HorizontalContentAlignment="Center" Foreground="red"/>
-
+                <Button Command="{Binding ConfirmCommand}" CommandParameter="{Binding ElementName=page}" Name="btn" Style="{DynamicResource ViewInButtonStyle}" Content="Confirm" Margin="20"/>
             </StackPanel>
+            <Grid   Visibility="{Binding LoadingVisibility}">
+                <Grid.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="black" Offset="0.1"/>
+                        <GradientStop Color="AliceBlue" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <ProgressBar  Style="{DynamicResource LoadingStyle}"/>
+                <materialDesign:PackIcon  Height="100" Width="200" VerticalAlignment="Center" HorizontalAlignment="Center"  Kind="ProgressDownload" Foreground="Green" Margin="0,200,0,0"/>
+            </Grid>
         </Grid>
     </Border>
+    
 </Page>

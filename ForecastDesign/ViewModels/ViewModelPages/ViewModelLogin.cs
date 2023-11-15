@@ -49,11 +49,12 @@ namespace ForecastDesign.ViewModels.ViewModelPages
             if (GetUsers.users!.FirstOrDefault(u => u.Gmail == ((TextBox)((Page)obj).FindName("gmail")).Text.ToString()
                                                   && u.Password == ((TextBox)((Page)obj).FindName("password")).Text.ToString()) != null)
             {
+                ((Button)((Page)obj).FindName("btn")).Foreground = Brushes.Green;
                 return true;
             }
             else
             {
-                ((Label)((Page)obj).FindName("lb_error")).Visibility = Visibility.Visible;
+                ((Button)((Page)obj).FindName("btn")).Foreground = Brushes.Gray;
                 return false;
             }
         }
