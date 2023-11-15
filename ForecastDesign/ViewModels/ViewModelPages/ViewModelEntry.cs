@@ -1,7 +1,9 @@
 ﻿using ForecastDesign.Commands;
 using ForecastDesign.Models.ForWeather;
+using ForecastDesign.Models.Users;
 using ForecastDesign.Services;
 using ForecastDesign.Statics.StaticClasses.GetImageClasses;
+using ForecastDesign.Statics.StaticClasses.GetUser;
 using ForecastDesign.Statics.StaticClasses.Maths;
 using ForecastDesign.Statics.StaticClasses.PullWeatherDataClasses;
 using ForecastDesign.Views.ViewPages;
@@ -28,11 +30,14 @@ namespace ForecastDesign.ViewModels.ViewModelPages
 {
     public class ViewModelEntry : ServiceINotifyPropertyChanged
     {
+        public User? user { get => user1; set { user1 = value; OnPropertyChanged(); } }
+     
         public Visibility LoadingVisibility { get => loadingVisibility; set { loadingVisibility = value; OnPropertyChanged(); } }
         public string CurrentTime { get => currentTime; set { currentTime = value; OnPropertyChanged(); } }
         private string currentTime;
         private WeatherData? Weather;
         private Visibility loadingVisibility;
+        private User? user1;
 
         public WeatherData? weather { get => Weather; set { Weather = value; OnPropertyChanged(); } }
 
@@ -61,6 +66,7 @@ namespace ForecastDesign.ViewModels.ViewModelPages
         #region GetWeatherData
         private async void GetDataAsync(string location)
         {
+            
             weather = await GetWeatherData.GetWeatherDataAsync(location)!;
             LoadingVisibility = Visibility.Hidden;
             if (weather == null)
@@ -72,6 +78,7 @@ namespace ForecastDesign.ViewModels.ViewModelPages
         #endregion
         public ViewModelEntry(string location)
         {
+            user = GetUsers.user;
             LoadingVisibility= Visibility.Visible;    
             Timer();
             GetDataAsync(location);
@@ -82,7 +89,13 @@ namespace ForecastDesign.ViewModels.ViewModelPages
             MapCommand = new Command(ExecuteMapCommand);
 
         }
-
+        private void SaveChanges()
+        {
+            var User = GetUsers.users!.FirstOrDefault(u=>u.Gmail==user.Gmail&&
+                                        u.Password==user.Password);
+            User = user;
+            File.WriteAllText(@"..\..\..\Database\JsonFiles\Users.json", JsonSerializer.Serialize(GetUsers.users, new JsonSerializerOptions() { WriteIndented = true }));
+        }
 
         private void ExecuteMapCommand(object obj)
         {
@@ -95,6 +108,8 @@ namespace ForecastDesign.ViewModels.ViewModelPages
 
         private void ExecuteSearchCommand(object obj)
         {
+            user?.Histories?.Add(new History() { location = obj.ToString() }) ;
+            SaveChanges();
             GetDataAsync(obj.ToString()!);
         }
 

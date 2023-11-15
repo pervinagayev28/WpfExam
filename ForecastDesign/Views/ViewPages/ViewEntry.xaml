@@ -104,6 +104,15 @@
 
                         </StackPanel>
                         <StackPanel   VerticalAlignment="Bottom" Grid.Column="1"  HorizontalAlignment="Center" >
+                            <ComboBox
+                            ItemsSource="{Binding user.Histories}"
+                             Height="20"
+                             Width="300"
+                             Background="Transparent"
+                             BorderBrush="Black"
+                             BorderThickness="0 0 0 2"
+                             />
+
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <Label FontFamily="Comic Sans MS" FontWeight="Light" HorizontalAlignment="Center" HorizontalContentAlignment="Center"  FontSize="30" Content="{Binding weather.city.name}"/>
                                 <materialDesign:PackIcon Kind="Location" Foreground="Red" Margin="0,0,0,5" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource IconStyle}"/>
@@ -239,7 +248,7 @@
         </Grid>
 
     </Grid>
-    
+
 </Page>
 
 

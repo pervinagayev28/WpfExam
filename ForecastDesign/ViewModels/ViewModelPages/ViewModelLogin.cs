@@ -62,8 +62,9 @@ namespace ForecastDesign.ViewModels.ViewModelPages
         private void ExecuteSignIncommand(object obj)
         {
             var page = new ViewEntry();
-            page.DataContext = new ViewModelEntry(GetUsers.users!.FirstOrDefault(u => u.Gmail == ((TextBox)((Page)obj).FindName("gmail")).Text.ToString()
-                                                  && u.Password == ((TextBox)((Page)obj).FindName("password")).Text.ToString())!.Location!);
+            GetUsers.user = GetUsers.users!.FirstOrDefault(u => u.Gmail == ((TextBox)((Page)obj).FindName("gmail")).Text.ToString()
+                                                  && u.Password == ((TextBox)((Page)obj).FindName("password")).Text.ToString());
+            page.DataContext = new ViewModelEntry(GetUsers.user!.Location!);
             ((Page)obj).NavigationService.Navigate(page);
         }
     }

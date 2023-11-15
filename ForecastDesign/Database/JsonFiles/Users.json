@@ -3,7 +3,11 @@
     "Gmail": "pervinagayev28@gmail.com",
     "Password": "MyP@ssw0rd",
     "Location": "xirdalan",
-    "Histories": []
+    "Histories": [
+      {
+        "location": "G\u0259d\u0259b\u0259y"
+      }
+    ]
   },
   {
     "Gmail": "pervinagayev28@gmail.com",

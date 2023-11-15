@@ -5,6 +5,7 @@
              StartupUri="Views\ViewWindows\ViewMain.xaml">
 
     <Application.Resources>
+        
         <ResourceDictionary >
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary  Source="\Resources\ResourcePages\ResourcesViewEntry\BorderStyle.xaml"/>
@@ -28,6 +29,10 @@
                 <ResourceDictionary  Source="\Resources\ResourcePages\ResourcesViewIn\ViewInButtonStyle.xaml"/>
                 <ResourceDictionary  Source="\Resources\ResourceUserControllers\ResourcesUserControllersWeekDays\BorderStyle.xaml"/>
                 <ResourceDictionary  Source="\Resources\ResourceUserControllers\ResourcesUserControllersWeekDays\TextBlockStyle.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
