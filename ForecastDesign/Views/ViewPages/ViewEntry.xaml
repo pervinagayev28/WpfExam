@@ -14,7 +14,6 @@
 
     <Grid Background="Transparent">
         <Border  Style="{DynamicResource BorderBackround}" CornerRadius="30">
-
             <Grid Background="Transparent" Margin="-9,5,9,-5" >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.3*"/>
@@ -33,10 +32,10 @@
                     </Grid.RowDefinitions>
 
                     <Grid VerticalAlignment="Center" Width="{Binding ElementName=border, Path=Width}" Grid.Row="0" Margin="0,5,0,0">
-                        <Border x:Name="border" Style="{DynamicResource borderStyle}" />
+                        <Border  x:Name="border" Style="{DynamicResource borderStyle}" />
                         <Label Content="search" Name="lb" Style="{DynamicResource LabelStyle}"/>
-                        <TextBox  x:Name="textbox_search" Style="{DynamicResource TextBoxStyle}" />
-                        <Button Command="{Binding SearchCommand}" CommandParameter="{Binding ElementName=textbox_search, Path=Text}" Style="{DynamicResource SearchButtonStyle}">
+                        <TextBox Padding="10,0" x:Name="textbox_search" Style="{DynamicResource TextBoxStyle}" />
+                        <Button Name="btn_search" Command="{Binding SearchCommand}" CommandParameter="{Binding ElementName=textbox_search, Path=Text}" Style="{DynamicResource SearchButtonStyle}">
                             <materialDesign:PackIcon Height="30" Width="30" Kind="Search" Foreground="{Binding ElementName=lb, Path=Foreground}"/>
                         </Button>
                     </Grid>
@@ -97,6 +96,7 @@
                                 <materialDesign:PackIcon Foreground="Black" Kind="LocationMultiple" Height="50" Width="50" />
                             </Button>
                             <Button 
+                                Name="btn_close"
                          Command="{Binding ClosedCommand}" CommandParameter="{Binding ElementName=ViewEntryPage}"  
                          Background="Black"   Margin="0,0,10,0" Style="{DynamicResource ButtonStyle}">
                                 <materialDesign:PackIcon Foreground="LightGray" Kind="CloseCircle" Height="50" Width="50"/>
@@ -105,13 +105,20 @@
                         </StackPanel>
                         <StackPanel   VerticalAlignment="Bottom" Grid.Column="1"  HorizontalAlignment="Center" >
                             <ComboBox
+                                Name="combobox"
                             ItemsSource="{Binding user.Histories}"
-                             Height="20"
+                             Height="30"
                              Width="300"
                              Background="Transparent"
                              BorderBrush="Black"
-                             BorderThickness="0 0 0 2"
-                             />
+                             BorderThickness="0 0 0 2" SelectionChanged="ComboBox_SelectionChanged" 
+                             >
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                            <TextBlock Text="{Binding location}" TextAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="15"/>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
 
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <Label FontFamily="Comic Sans MS" FontWeight="Light" HorizontalAlignment="Center" HorizontalContentAlignment="Center"  FontSize="30" Content="{Binding weather.city.name}"/>

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForecastDesign", "ForecastDesign\ForecastDesign.csproj", "{CE13AD60-D566-4E9B-8BAC-6DA0BEFEE441}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForecastDesign", "ForecastDesign\ForecastDesign.csproj", "{CE13AD60-D566-4E9B-8BAC-6DA0BEFEE441}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

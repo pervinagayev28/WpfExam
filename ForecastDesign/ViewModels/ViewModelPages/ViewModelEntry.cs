@@ -46,6 +46,8 @@ namespace ForecastDesign.ViewModels.ViewModelPages
         public ICommand? CelciCommand { get; set; }
         public ICommand? SearchCommand { get; set; }
         public ICommand? MapCommand { get; set; }
+      
+
 
         #region Timer
 
@@ -66,7 +68,7 @@ namespace ForecastDesign.ViewModels.ViewModelPages
         #region GetWeatherData
         private async void GetDataAsync(string location)
         {
-            
+            loadingVisibility = Visibility.Visible;
             weather = await GetWeatherData.GetWeatherDataAsync(location)!;
             LoadingVisibility = Visibility.Hidden;
             if (weather == null)
@@ -79,7 +81,6 @@ namespace ForecastDesign.ViewModels.ViewModelPages
         public ViewModelEntry(string location)
         {
             user = GetUsers.user;
-            LoadingVisibility= Visibility.Visible;    
             Timer();
             GetDataAsync(location);
             ClosedCommand = new Command(ExecuteCloseCommand);
@@ -89,6 +90,8 @@ namespace ForecastDesign.ViewModels.ViewModelPages
             MapCommand = new Command(ExecuteMapCommand);
 
         }
+
+        
         private void SaveChanges()
         {
             var User = GetUsers.users!.FirstOrDefault(u=>u.Gmail==user.Gmail&&
