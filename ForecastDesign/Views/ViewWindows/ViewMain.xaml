@@ -13,6 +13,6 @@
                   WindowStartupLocation="CenterScreen"
         Title="ViewMain" Height="720" Width="1080">
     <NavigationWindow.Content>
-        <Frame Source="..\ViewPages\ViewEntry.xaml"/>
+        <Frame Source="..\ViewPages\ViewIn.xaml"/>
     </NavigationWindow.Content>
 </NavigationWindow>

@@ -1,0 +1,39 @@
+﻿<Page x:Class="ForecastDesign.Views.ViewPages.ViewLogIn"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ForecastDesign.Views.ViewPages"
+      mc:Ignorable="d" Name="page"
+      xmlns:btn="clr-namespace:ForecastDesign.UserControllers"
+      xmlns:UCTextbox="clr-namespace:ForecastDesign.UserControllers"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ViewLogIn">
+
+    <Border  Style="{DynamicResource BorderBackround}"  CornerRadius="30">
+        <Grid  Background="Transparent">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions >
+            <btn:UserControlViewInButton CommandParam="{Binding ElementName=page}"  command="{Binding GoBackcommand}"   HorizontalAlignment="Left" IconKind="ArrowBack"/>
+            <btn:UserControlViewInButton CommandParam="{Binding ElementName=page}"  command="{Binding Closecommand}" HorizontalAlignment="Right" IconKind="Close"/>
+
+            <StackPanel Grid.Row="1" Background="Transparent" VerticalAlignment="Center">
+                <Grid HorizontalAlignment="Center" Background="Transparent">
+                    <UCTextbox:UserControlTextBox LbContent="Gmail" Text="{Binding ElementName=gmail, Path=Text}"/>
+                    <TextBox x:Name="gmail" Style="{DynamicResource ViewLogInTextBoxStyle}"/>
+                </Grid>
+                <Grid Margin="20" HorizontalAlignment="Center" Background="Transparent">
+                    <UCTextbox:UserControlTextBox LbContent="Password" Text="{Binding ElementName=password, Path=Text}"/>
+                    <TextBox x:Name="password" Style="{DynamicResource ViewLogInTextBoxStyle}"/>
+                </Grid>
+                <Button Command="{Binding SignIncommand}"
+                        CommandParameter="{Binding ElementName=page}"
+                        Style="{DynamicResource ViewInButtonStyle}" Content="Sign in" Margin="10"/>
+                <Label Name="lb_error" Visibility="Hidden" Height="40" Width="300" Content="errrorere" FontSize="20" HorizontalContentAlignment="Center" Foreground="red"/>
+
+            </StackPanel>
+        </Grid>
+    </Border>
+</Page>

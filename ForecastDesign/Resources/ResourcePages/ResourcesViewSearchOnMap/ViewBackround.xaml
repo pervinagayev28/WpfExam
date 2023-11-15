@@ -3,12 +3,10 @@
     <Style x:Key="BorderBackround" TargetType="Border">
         <Setter Property="Background">
             <Setter.Value>
-                    <LinearGradientBrush>
-
-                        <GradientStop Color="black" Offset="0.1"/>
-                        <GradientStop Color="AliceBlue" Offset="1"/>
-
-                    </LinearGradientBrush>
+                <LinearGradientBrush>
+                    <GradientStop Color="black" Offset="0.1"/>
+                    <GradientStop Color="AliceBlue" Offset="1"/>
+                </LinearGradientBrush>
             </Setter.Value>
         </Setter>
     </Style>

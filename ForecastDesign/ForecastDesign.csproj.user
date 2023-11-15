@@ -13,10 +13,31 @@
     <Compile Update="UserControllers\UserControlMapContent.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UserControllers\UserControlTextBox.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControllers\UserControlViewInButton.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UserControllers\UserControlWeekDays.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\ViewPages\ViewConfirmationCode.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ViewPages\ViewCreatPass.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\ViewPages\ViewEntry.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ViewPages\ViewIn.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ViewPages\ViewLogIn.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ViewPages\ViewRegistration.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\ViewPages\ViewSearchLocationOnMap.xaml.cs">
@@ -48,6 +69,9 @@
     <Page Update="Resources\ResourcePages\ResourcesViewEntry\ListViewStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Resources\ResourcePages\ResourcesViewEntry\LoadingStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Resources\ResourcePages\ResourcesViewEntry\SearchButtonStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -55,6 +79,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\ResourcePages\ResourcesViewEntry\TextBoxStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\ResourcePages\ResourcesViewLogIn\ViewLogInTextBoxStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\ResourcePages\ResourcesViewSearchOnMap\BorderStyleForButtons.xaml">
@@ -75,6 +102,9 @@
     <Page Update="Resources\ResourcePages\ResourcesViewSearchOnMap\ViewBackround.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Resources\ResourcePages\ResourcesViewIn\ViewInButtonStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Resources\ResourceUserControllers\ResourcesUserControllersWeekDays\BorderStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -87,10 +117,31 @@
     <Page Update="UserControllers\UserControlMapContent.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="UserControllers\UserControlTextBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControllers\UserControlViewInButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="UserControllers\UserControlWeekDays.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\ViewPages\ViewConfirmationCode.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ViewPages\ViewCreatPass.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\ViewPages\ViewEntry.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ViewPages\ViewIn.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ViewPages\ViewLogIn.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ViewPages\ViewRegistration.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\ViewPages\ViewSearchLocationOnMap.xaml">

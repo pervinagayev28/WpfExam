@@ -30,7 +30,7 @@ namespace ForecastDesign.Views.ViewPages
         public ViewEntry()
         {
             InitializeComponent();
-            DataContext = new ViewModelEntry();
+            //DataContext = new ViewModelEntry();
         }
 
      

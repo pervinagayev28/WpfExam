@@ -51,9 +51,6 @@ namespace ForecastDesign.UserControllers
             InitializeComponent();
         }
 
-        private void some(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("sdsadfsd");
-        }
+      
     }
 }

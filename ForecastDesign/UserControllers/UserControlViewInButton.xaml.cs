@@ -1,0 +1,57 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace ForecastDesign.UserControllers
+{
+    
+    public partial class UserControlViewInButton : UserControl
+    {
+
+        public static readonly DependencyProperty CommandParamProperty =
+                   DependencyProperty.Register("CommandParam", typeof(object), typeof(UserControlViewInButton));
+
+        public object CommandParam
+        {
+            get { return (object)GetValue(CommandParamProperty); }
+            set { SetValue(CommandParamProperty, value); }
+        }
+
+
+
+        public static readonly DependencyProperty CommandProperty =
+                     DependencyProperty.Register("command", typeof(ICommand), typeof(UserControlViewInButton));
+
+        public ICommand command
+        {
+            get { return (ICommand)GetValue(CommandProperty); }
+            set { SetValue(CommandProperty, value); }
+
+
+
+        }
+        public static readonly DependencyProperty IconKindProperty =
+                      DependencyProperty.Register("IconKind", typeof(string), typeof(UserControlViewInButton));
+
+        public string IconKind
+        {
+            get { return (string)GetValue(IconKindProperty); }
+            set { SetValue(IconKindProperty, value); }
+        }
+        public UserControlViewInButton()
+        {
+            InitializeComponent();
+        }
+    }
+}

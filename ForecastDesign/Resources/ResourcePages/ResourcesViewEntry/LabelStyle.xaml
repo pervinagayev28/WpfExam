@@ -7,7 +7,6 @@
         <Setter Property="FontSize" Value="{Binding ElementName=textbox_search, Path=FontSize}"/>
         <Setter Property="Visibility" Value="Hidden"/>
         <Setter Property="Foreground" Value="White"/>
-        <Setter Property="Content" Value="search"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="{Binding ElementName=textbox_search, Path=HorizontalAlignment}"/>
         <Setter Property="FontWeight" Value="{Binding ElementName=textbox_search, Path=FontWeight}"/>

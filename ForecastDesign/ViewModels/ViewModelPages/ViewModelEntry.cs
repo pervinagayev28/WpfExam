@@ -5,6 +5,7 @@ using ForecastDesign.Statics.StaticClasses.GetImageClasses;
 using ForecastDesign.Statics.StaticClasses.Maths;
 using ForecastDesign.Statics.StaticClasses.PullWeatherDataClasses;
 using ForecastDesign.Views.ViewPages;
+using ForecastDesign.Views.ViewWindows;
 using MaterialDesignThemes.Wpf;
 using Microsoft.Maps.MapControl.WPF;
 using System;
@@ -27,9 +28,12 @@ namespace ForecastDesign.ViewModels.ViewModelPages
 {
     public class ViewModelEntry : ServiceINotifyPropertyChanged
     {
+        public Visibility LoadingVisibility { get => loadingVisibility; set { loadingVisibility = value; OnPropertyChanged(); } }
         public string CurrentTime { get => currentTime; set { currentTime = value; OnPropertyChanged(); } }
         private string currentTime;
         private WeatherData? Weather;
+        private Visibility loadingVisibility;
+
         public WeatherData? weather { get => Weather; set { Weather = value; OnPropertyChanged(); } }
 
         public ICommand? ClosedCommand { get; set; }
@@ -58,6 +62,7 @@ namespace ForecastDesign.ViewModels.ViewModelPages
         private async void GetDataAsync(string location)
         {
             weather = await GetWeatherData.GetWeatherDataAsync(location)!;
+            LoadingVisibility = Visibility.Hidden;
             if (weather == null)
             {
                 MessageBox.Show("not found location");
@@ -65,10 +70,11 @@ namespace ForecastDesign.ViewModels.ViewModelPages
             }
         }
         #endregion
-        public ViewModelEntry()
+        public ViewModelEntry(string location)
         {
+            LoadingVisibility= Visibility.Visible;    
             Timer();
-            GetDataAsync("Xirdalan");
+            GetDataAsync(location);
             ClosedCommand = new Command(ExecuteCloseCommand);
             FahrenHeitCommand = new Command(ExecuteFahrenHeitCommand, CanExecuteFahrenHeitCommand);
             CelciCommand = new Command(ExecuteCelciCommand, CanExecuteCelciCommand);
@@ -84,7 +90,6 @@ namespace ForecastDesign.ViewModels.ViewModelPages
             ViewMap.DataContext = new ViewModelSearchLocationOnMap();
             ((Page)obj).NavigationService.Navigate(ViewMap);
         }
-
         private bool CanExecuteSearchCommand(object obj)=>
             !string.IsNullOrEmpty(obj.ToString());
 
