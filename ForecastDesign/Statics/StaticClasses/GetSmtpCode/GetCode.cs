@@ -25,7 +25,7 @@ namespace ForecastDesign.Statics.StaticClasses.GetSmtpCode
         <html>
         <body style='text-align: center; font-family: Arial, sans-serif;'>
             <div style='background-color: #f4f4f4; padding: 20px; border-radius: 10px; width: 300px; margin: 0 auto;'>
-                <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj91jn9IQxdOKw4uK9GmN4tGNF__Xgx5PFNQ&usqp=CAU' alt='Logo' style='max-width: 100%; height: auto; margin-bottom: 15px;'/>
+                <img src='https://nordicapis.com/wp-content/uploads/6-Best-Free-and-Paid-Weather-APIs.png' alt='Logo' style='max-width: 100%; height: auto; margin-bottom: 15px;'/>
                 <h2 style='color: #333;'>Gmail Verification Code</h2>
                 <p style='color: #555;'>Hello,</p>
                 <p style='color: #555; font-size: 24px; font-weight: bold;'>Your Verification Code: <span style='color: #e44d26; font-size: 36px;'>{VerifyCode}</span></p>

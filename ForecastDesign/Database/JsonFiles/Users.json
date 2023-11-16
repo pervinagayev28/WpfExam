@@ -1,3 +1,18 @@
 [
-  
+  {
+    "Gmail": "pervinagayev28@gmail.com",
+    "Password": "Pervin123@",
+    "Location": "Baku",
+    "Histories": [
+      {
+        "location": "Istanbul"
+      }
+    ]
+  },
+  {
+    "Gmail": "pervinagayev28@gmail.com",
+    "Password": "Pervin123@",
+    "Location": "Russia",
+    "Histories": []
+  }
 ]

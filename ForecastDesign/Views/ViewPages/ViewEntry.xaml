@@ -65,7 +65,7 @@
                         </StackPanel>
                     </StackPanel>
 
-                    <Border Grid.Row="6" Height="150" Width="200"  CornerRadius="50" VerticalAlignment="Center">
+                    <Border Grid.Row="6" Height="150" Width="200"  CornerRadius="100" VerticalAlignment="Center">
                         <Border.Background>
                             <ImageBrush ImageSource="{Binding weather.ImageSourceCity}"/>
                         </Border.Background>
@@ -246,7 +246,7 @@
             </Grid>
         </Border>
 
-        <!--<Grid   Visibility="{Binding LoadingVisibility}">
+        <Grid   Visibility="{Binding LoadingVisibility}">
             <Grid.Background>
                 <LinearGradientBrush>
                     <GradientStop Color="black" Offset="0.1"/>
@@ -255,7 +255,7 @@
             </Grid.Background>
             <ProgressBar  Style="{DynamicResource LoadingStyle}"/>
                 <materialDesign:PackIcon  Height="100" Width="200" VerticalAlignment="Center" HorizontalAlignment="Center"  Kind="ProgressDownload" Foreground="Green" Margin="0,200,0,0"/> 
-        </Grid>-->
+        </Grid>
 
     </Grid>
 
