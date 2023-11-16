@@ -54,6 +54,9 @@
     <Page Update="Resources\ResourcePages\ResourcesViewEntry\ButtonStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Resources\ResourcePages\ResourcesViewEntry\ClearButtonStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Resources\ResourcePages\ResourcesViewEntry\GroupBoxStyle.xaml">
       <SubType>Designer</SubType>
     </Page>

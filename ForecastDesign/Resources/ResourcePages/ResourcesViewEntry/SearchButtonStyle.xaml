@@ -11,7 +11,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border CornerRadius="10" Background="{TemplateBinding Background}">
+                    <Border CornerRadius="20" Background="{TemplateBinding Background}">
                         <materialDesign:PackIcon Name="icon" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}" Kind="Search" Foreground="{Binding ElementName=lb, Path=Foreground}"/>
                     </Border>
                     <ControlTemplate.Triggers>

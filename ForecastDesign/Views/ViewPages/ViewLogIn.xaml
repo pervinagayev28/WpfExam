@@ -21,8 +21,8 @@
 
             <StackPanel Grid.Row="1" Background="Transparent" VerticalAlignment="Center">
                 <Grid HorizontalAlignment="Center" Background="Transparent">
-                    <UCTextbox:UserControlTextBox LbContent="Gmail" Text="{Binding ElementName=gmail, Path=Text}"/>
-                    <TextBox x:Name="gmail" HorizontalContentAlignment="Center" Padding="5,0" Style="{DynamicResource ViewLogInTextBoxStyle}"/>
+                    <UCTextbox:UserControlTextBox  LbContent="Gmail" Text="{Binding ElementName=gmail, Path=Text}"/>
+                    <TextBox x:Name="gmail" HorizontalContentAlignment="Center" Style="{DynamicResource ViewLogInTextBoxStyle}"/>
                 </Grid>
                 <Grid Margin="20" HorizontalAlignment="Center" Background="Transparent">
                     <UCTextbox:UserControlTextBox LbContent="Password" Text="{Binding ElementName=password, Path=Text}"/>

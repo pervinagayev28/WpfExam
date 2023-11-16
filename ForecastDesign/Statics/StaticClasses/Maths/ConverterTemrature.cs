@@ -11,11 +11,8 @@ namespace ForecastDesign.Statics.StaticClasses.Maths
         public static float ConvertToFarenheit(float celsius) =>
                  (celsius * 9 / 5) + 32;
         public static float ConvertToCelsius(float fahrenheit) =>
-                (fahrenheit - 32) * 5 / 9;
+                (float)Math.Round((((double)fahrenheit - 32) * 5 / 9), 2);
 
-        internal static object ConvertToCelsius(object temp)
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }

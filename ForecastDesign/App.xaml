@@ -12,6 +12,7 @@
                 <ResourceDictionary  Source="\Resources\ResourcePages\ResourcesViewLogIn\ViewLogInTextBoxStyle.xaml"/>
                 <ResourceDictionary  Source="\Resources\ResourcePages\ResourcesViewEntry\LoadingStyle.xaml"/>
                 <ResourceDictionary  Source="\Resources\ResourcePages\ResourcesViewEntry\SearchButtonStyle.xaml"/>
+                <ResourceDictionary  Source="\Resources\ResourcePages\ResourcesViewEntry\ClearButtonStyle.xaml"/>
                 <ResourceDictionary  Source="\Resources\ResourcePages\ResourcesViewEntry\ListViewStyle.xaml"/>
                 <ResourceDictionary  Source="\Resources\ResourcePages\ResourcesViewEntry\IsMouseOverBackround.xaml"/>
                 <ResourceDictionary  Source="\Resources\ResourcePages\ResourcesViewSearchOnMap\Border_Style.xaml"/>

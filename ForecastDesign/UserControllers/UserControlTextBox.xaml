@@ -13,7 +13,7 @@
                 <GradientStop Color="black" Offset="0.1"/>
                 <GradientStop Color="AliceBlue" Offset="1"/>
             </LinearGradientBrush>
-        </Border.Background>
+        </Border.Background >
         <Grid Background="Transparent">
             <Label   FontSize="30" FontWeight="Bold" HorizontalAlignment="Center">
                 <Label.Style>

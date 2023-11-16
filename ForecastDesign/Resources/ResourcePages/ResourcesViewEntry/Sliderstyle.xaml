@@ -13,6 +13,9 @@
                                 <Thumb x:Name="Thumb" Width="20" Height="20" Canvas.Left="{TemplateBinding Value}" Canvas.Top="0">
                                     <Thumb.Style>
                                         <Style TargetType="Thumb">
+                                            <Setter Property="IsTabStop" Value="False"/>
+                                            <Setter Property="IsHitTestVisible" Value="False"/>
+                                            <Setter Property="IsManipulationEnabled" Value="False"/>
                                             <Setter Property="Template">
                                                 <Setter.Value>
                                                     <ControlTemplate TargetType="Thumb">

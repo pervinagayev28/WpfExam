@@ -34,9 +34,9 @@
                     <Grid VerticalAlignment="Center" Width="{Binding ElementName=border, Path=Width}" Grid.Row="0" Margin="0,5,0,0">
                         <Border  x:Name="border" Style="{DynamicResource borderStyle}" />
                         <Label Content="search" Name="lb" Style="{DynamicResource LabelStyle}"/>
-                        <TextBox Padding="10,0" x:Name="textbox_search" Style="{DynamicResource TextBoxStyle}" />
-                        <Button Name="btn_search" Command="{Binding SearchCommand}" CommandParameter="{Binding ElementName=textbox_search, Path=Text}" Style="{DynamicResource SearchButtonStyle}">
-                            <materialDesign:PackIcon Height="30" Width="30" Kind="Search" Foreground="{Binding ElementName=lb, Path=Foreground}"/>
+                        <TextBox  x:Name="textbox_search" Style="{DynamicResource TextBoxStyle}" />
+                        <Button  Name="btn_search" Command="{Binding SearchCommand}" CommandParameter="{Binding ElementName=textbox_search, Path=Text}" Style="{DynamicResource SearchButtonStyle}">
+                            <materialDesign:PackIcon  Height="30" Width="30" Kind="Search" Foreground="{Binding ElementName=lb, Path=Foreground}"/>
                         </Button>
                     </Grid>
 
@@ -104,21 +104,24 @@
 
                         </StackPanel>
                         <StackPanel   VerticalAlignment="Bottom" Grid.Column="1"  HorizontalAlignment="Center" >
-                            <ComboBox
-                                Name="combobox"
-                            ItemsSource="{Binding user.Histories}"
-                             Height="30"
-                             Width="300"
-                             Background="Transparent"
-                             BorderBrush="Black"
-                             BorderThickness="0 0 0 2" SelectionChanged="ComboBox_SelectionChanged" 
-                             >
-                                <ComboBox.ItemTemplate>
-                                    <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Command="{Binding ClearHistoryCommand}" CommandParameter="{Binding ElementName=ViewEntryPage}" Style="{DynamicResource ClearButtonStyle}"/>
+                                <ComboBox
+                                    Name="combobox"
+                                ItemsSource="{Binding user.Histories}"
+                                 Height="30"
+                                    Foreground="Gray"
+                                 Width="250"
+                                    BorderBrush="Black"
+                                 BorderThickness="0 0 0 2" SelectionChanged="ComboBox_SelectionChanged"  >
+                                    <ComboBox.ItemTemplate>
+                                       
+                                        <DataTemplate>
                                             <TextBlock Text="{Binding location}" TextAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="15"/>
-                                    </DataTemplate>
-                                </ComboBox.ItemTemplate>
-                            </ComboBox>
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                </ComboBox>
+                            </StackPanel>
 
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <Label FontFamily="Comic Sans MS" FontWeight="Light" HorizontalAlignment="Center" HorizontalContentAlignment="Center"  FontSize="30" Content="{Binding weather.city.name}"/>
@@ -162,7 +165,7 @@
                                         <Slider Value="{Binding ElementName=HumiditlySlider, Path=Value}"  Style="{DynamicResource SliderStyle}"/>
                                     </Border>
                                     <Border Width="200" CornerRadius="10" Margin="0,20,0,0" Padding="10,0,10,0" Height="30" BorderBrush="Gray" BorderThickness="2" Background="Transparent">
-                                        <Slider Maximum="100000" Value="{Binding ElementName=VisibilitySlider, Path=Value}" Style="{DynamicResource SliderStyle}"/>
+                                        <Slider Maximum="100000" Value="{Binding ElementName=VisibilitySlider, Path=Value}" Style="{DynamicResource SliderStyle}" IsMoveToPointEnabled="False" IsTabStop="False"/>
                                     </Border>
                                     <Border Width="200" CornerRadius="10" Margin="0,20,0,0" Padding="10,0,10,0" Height="30" BorderBrush="Gray" BorderThickness="2" Background="Transparent">
                                         <Slider Maximum="1100" Value="{Binding ElementName=SeaLevelSlider, Path=Value}"  Style="{DynamicResource SliderStyle}"/>
@@ -243,7 +246,7 @@
             </Grid>
         </Border>
 
-        <Grid   Visibility="{Binding LoadingVisibility}">
+        <!--<Grid   Visibility="{Binding LoadingVisibility}">
             <Grid.Background>
                 <LinearGradientBrush>
                     <GradientStop Color="black" Offset="0.1"/>
@@ -252,7 +255,7 @@
             </Grid.Background>
             <ProgressBar  Style="{DynamicResource LoadingStyle}"/>
                 <materialDesign:PackIcon  Height="100" Width="200" VerticalAlignment="Center" HorizontalAlignment="Center"  Kind="ProgressDownload" Foreground="Green" Margin="0,200,0,0"/> 
-        </Grid>
+        </Grid>-->
 
     </Grid>
 

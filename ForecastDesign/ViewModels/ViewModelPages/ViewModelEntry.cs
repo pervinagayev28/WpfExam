@@ -31,7 +31,7 @@ namespace ForecastDesign.ViewModels.ViewModelPages
     public class ViewModelEntry : ServiceINotifyPropertyChanged
     {
         public User? user { get => user1; set { user1 = value; OnPropertyChanged(); } }
-     
+
         public Visibility LoadingVisibility { get => loadingVisibility; set { loadingVisibility = value; OnPropertyChanged(); } }
         public string CurrentTime { get => currentTime; set { currentTime = value; OnPropertyChanged(); } }
         private string currentTime;
@@ -46,7 +46,8 @@ namespace ForecastDesign.ViewModels.ViewModelPages
         public ICommand? CelciCommand { get; set; }
         public ICommand? SearchCommand { get; set; }
         public ICommand? MapCommand { get; set; }
-      
+        public ICommand? ClearHistoryCommand { get; set; }
+
 
 
         #region Timer
@@ -88,30 +89,47 @@ namespace ForecastDesign.ViewModels.ViewModelPages
             CelciCommand = new Command(ExecuteCelciCommand, CanExecuteCelciCommand);
             SearchCommand = new Command(ExecuteSearchCommand, CanExecuteSearchCommand);
             MapCommand = new Command(ExecuteMapCommand);
+            ClearHistoryCommand = new Command(ExecuteClearHistoryCommand, CanExecuteClearHistoryCommand);
 
         }
 
-        
+        private bool CanExecuteClearHistoryCommand(object obj)
+        {
+            if (((ComboBox)((Page)obj).FindName("combobox")).Items.Count != 0)
+            {
+                ((ComboBox)((Page)obj).FindName("combobox")).Foreground = Brushes.Green;
+                return true;
+            }
+            else
+            {
+                ((ComboBox)((Page)obj).FindName("combobox")).Foreground = Brushes.Gray;
+                return false;
+            }
+        }
+
+        private void ExecuteClearHistoryCommand(object obj) =>
+                user!.Histories!.Clear();
+
         private void SaveChanges()
         {
-            var User = GetUsers.users!.FirstOrDefault(u=>u.Gmail==user.Gmail&&
-                                        u.Password==user.Password);
+            var User = GetUsers.users!.FirstOrDefault(u => u.Gmail == user.Gmail &&
+                                        u.Password == user.Password);
             User = user;
             File.WriteAllText(@"..\..\..\Database\JsonFiles\Users.json", JsonSerializer.Serialize(GetUsers.users, new JsonSerializerOptions() { WriteIndented = true }));
         }
 
         private void ExecuteMapCommand(object obj)
         {
-            Page ViewMap =new ViewSearchLocationOnMap();
+            Page ViewMap = new ViewSearchLocationOnMap();
             ViewMap.DataContext = new ViewModelSearchLocationOnMap();
             ((Page)obj).NavigationService.Navigate(ViewMap);
         }
-        private bool CanExecuteSearchCommand(object obj)=>
+        private bool CanExecuteSearchCommand(object obj) =>
             !string.IsNullOrEmpty(obj.ToString());
 
         private void ExecuteSearchCommand(object obj)
         {
-            user?.Histories?.Add(new History() { location = obj.ToString() }) ;
+            user?.Histories?.Add(new History() { location = obj.ToString() });
             SaveChanges();
             GetDataAsync(obj.ToString()!);
         }
